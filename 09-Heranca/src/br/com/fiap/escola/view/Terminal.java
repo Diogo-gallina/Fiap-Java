@@ -7,13 +7,10 @@ public class Terminal {
 
 	public static void main(String[] args) {
 		//Instanciar uma Pessoa
-		Pessoa pessoa = new Pessoa();
-		pessoa.setCodigo(89);
+		Pessoa pessoa = new Pessoa(0, null, null, null);
 		
 		//Instanciar um Aluno
-		Aluno aluno = new Aluno();
-		aluno.setCodigo(1); 
-		aluno.setRm(123); 
+		Aluno aluno = new Aluno(0, null, null, null, 0, null);
 
 	}
 }
