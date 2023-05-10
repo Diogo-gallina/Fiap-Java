@@ -14,6 +14,5 @@ public class LivroInfantil extends Livro{
 	public void setIlustrador(String ilustrador) {
 		this.ilustrador = ilustrador;
 	}
-	
-	
+		
 }
