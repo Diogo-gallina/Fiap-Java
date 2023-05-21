@@ -6,7 +6,7 @@ public class ContaBancaria {
 	private int agencia;
 	private String numeroConta;
 	
-	public ContaBancaria() {}
+
 	
 	public ContaBancaria(double saldo, Titular titular, int agencia, String numeroConta) {
 		this.saldo = saldo;
