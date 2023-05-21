@@ -6,10 +6,11 @@ public class Formacao {
 	private double mensalidade;
 	private int duracao;
 	
-	public Formacao(String descricao, int periodo, double mensalidade, int duracao) {
+	public Formacao(){}
+	
+	public Formacao(String descricao, int periodo, int duracao) {
 		this.descricao = descricao;
 		this.periodo = periodo;
-		this.mensalidade = mensalidade;
 		this.duracao = duracao;
 	}
 	

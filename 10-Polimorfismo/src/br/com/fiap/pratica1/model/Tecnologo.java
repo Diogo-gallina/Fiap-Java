@@ -3,8 +3,8 @@ package br.com.fiap.pratica1.model;
 public class Tecnologo extends Formacao{
 	private boolean planoEstendido;
 
-	public Tecnologo(String descricao, int periodo, double mensalidade, int duracao, boolean planoEstendido) {
-		super(descricao, periodo, mensalidade, duracao);
+	public Tecnologo(String descricao, int periodo, int duracao, boolean planoEstendido) {
+		super(descricao, periodo, duracao);
 		this.planoEstendido = planoEstendido;
 	}
 	
@@ -14,7 +14,12 @@ public class Tecnologo extends Formacao{
 
 	@Override
 	public String toString() {
-		return "Tecnologo [planoEstendido=" + planoEstendido + "]";
+		return "Tecnologo \n"
+				+ "\ndescricao: " + super.getDescricao()
+				+ "\nperiodo=" + super.getPeriodo()
+				+ "\nmensalidade=" + super.getMensalidade()
+				+ "\nduracao=" + super.getDuracao()
+				+ "\nplanoEstendido=" + planoEstendido;
 	}
 
 	public boolean getPlanoEstendido() {
