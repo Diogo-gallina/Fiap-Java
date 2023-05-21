@@ -12,9 +12,15 @@ public class Bacharelado extends Formacao{
 	}
 	
 	public double calcularMensalidade(double fator) {
-		
+		return (super.getDuracao() * fator * 600) + (cargaHorariaEstagio * 12);
 	}
 	
+	@Override
+	public String toString() {
+		return "Bacharelado [projetoConclusao=" + projetoConclusao + ", cargaHorariaEstagio=" + cargaHorariaEstagio
+				+ "]";
+	}
+
 	public String getProjetoConclusao() {
 		return projetoConclusao;
 	}

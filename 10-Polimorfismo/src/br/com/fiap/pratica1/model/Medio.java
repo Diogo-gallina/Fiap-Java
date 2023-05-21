@@ -9,9 +9,14 @@ public class Medio extends Formacao{
 	}
 
 	public double calcularMensalidade(double fator) {
-		
+		return super.getDuracao() * fator * 500;
 	}
 	
+	@Override
+	public String toString() {
+		return "Medio [tipo=" + tipo + "]";
+	}
+
 	public String getTipo() {
 		return tipo;
 	}
