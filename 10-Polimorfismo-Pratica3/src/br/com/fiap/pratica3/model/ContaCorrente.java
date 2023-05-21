@@ -8,6 +8,11 @@ public class ContaCorrente extends ContaBancaria{
 		this.limiteCredito = limiteCredito;
 	}
 
+	public String exibirSaldo() {
+		return "Saldo: " + super.getSaldo()
+		+ "\nLimite: " + limiteCredito;
+	}
+	
 	public double getLimiteCredito() {
 		return limiteCredito;
 	}

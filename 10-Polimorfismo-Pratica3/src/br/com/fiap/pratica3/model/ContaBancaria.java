@@ -14,7 +14,12 @@ public class ContaBancaria {
 		this.agencia = agencia;
 		this.numeroConta = numeroConta;
 	}
-	
+
+
+	public String exibirSaldo() {
+		return "Saldo: " + saldo;
+	}
+
 
 	public void sacar(double valor) {
 		saldo -= valor;
