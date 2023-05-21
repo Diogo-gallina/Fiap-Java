@@ -6,20 +6,28 @@ public class Formacao {
 	private double mensalidade;
 	private int duracao;
 	
-	public Formacao() {	
-	}
+	public Formacao(){}
 	
-	public Formacao(String descricao, int periodo, double mensalidade, int duracao) {
+	public Formacao(String descricao, int periodo, int duracao) {
 		this.descricao = descricao;
 		this.periodo = periodo;
-		this.mensalidade = mensalidade;
 		this.duracao = duracao;
 	}
 	
 	//Metodos Classe Pai
 	
 	public void definirDuracao() {
-		
+		if(this instanceof Medio) {
+			duracao = 36;
+		}else if(this instanceof Tecnologo) {
+			duracao = 24;
+		}else if(this instanceof Bacharelado) {
+			if(descricao.contains("engenharia")) {
+				duracao = 60;
+			}else {
+				duracao = 48;
+			}
+		}
 	}
 	
 	public double calcularMedia(double global1, double global2) {
@@ -48,7 +56,11 @@ public class Formacao {
 		return media;
 	}
 
-
+	@Override
+	public String toString() {
+		return "Formacao [descricao=" + descricao + ", periodo=" + periodo + ", mensalidade=" + mensalidade
+				+ ", duracao=" + duracao + "]";
+	}
 
 	public String getDescricao() {
 		return descricao;
